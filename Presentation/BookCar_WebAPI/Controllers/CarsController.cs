@@ -17,13 +17,16 @@ namespace BookCar_WebAPI.Controllers
         private readonly UpdateCarCommandHandler _updateCarCommandHandler;
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
-
+        private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
+        private readonly GetCarWithPricingQueryHandler _getCarWithPricingQueryHandler;
         public CarsController(GetCarByIdQueryHandler getCarByIdQueryHandler,
             GetCarQueryHandler getCarQueryHandler,
             CreateCarCommandHandler createCarCommandHandler,
             UpdateCarCommandHandler updateCarCommandHandler,
             RemoveCarCommandHandler removeCarCommandHandler,
-            GetCarWithBrandQueryHandler getCarWithBrandQueryHandler)
+            GetCarWithBrandQueryHandler getCarWithBrandQueryHandler,
+            GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler = null,
+            GetCarWithPricingQueryHandler getCarWithPricingQueryHandler = null)
         {
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
             _getCarQueryHandler = getCarQueryHandler;
@@ -31,6 +34,8 @@ namespace BookCar_WebAPI.Controllers
             _updateCarCommandHandler = updateCarCommandHandler;
             _removeCarCommandHandler = removeCarCommandHandler;
             _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
+            _getLast5CarWithBrandQueryHandler = getLast5CarWithBrandQueryHandler;
+            _getCarWithPricingQueryHandler = getCarWithPricingQueryHandler;
         }
 
 
@@ -75,6 +80,20 @@ namespace BookCar_WebAPI.Controllers
         {
             var value =  _getCarWithBrandQueryHandler.Handle();
             return Ok(value);
+        }
+
+        [HttpGet("GetLast5CarWithBrandQueryHandler")]
+        public IActionResult GetLast5CarWithBrandQueryHandler()
+        {
+            var values = _getLast5CarWithBrandQueryHandler.Handle();
+            return Ok(values);
+        }
+
+        [HttpGet("GetCarWithPricingQueryHandler")]
+        public IActionResult GetCarWithPricingQueryHandler()
+        {
+            var values = _getCarWithPricingQueryHandler.Handle();
+            return Ok(values);
         }
     }
 }

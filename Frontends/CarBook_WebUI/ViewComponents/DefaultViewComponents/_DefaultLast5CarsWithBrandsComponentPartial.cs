@@ -1,15 +1,14 @@
-﻿using CarBook_Dto.FooterAddressDtos;
+﻿using CarBook_Dto.CarDtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ViewComponents;
 using Newtonsoft.Json;
 
-namespace CarBook_WebUI.ViewComponents.FooterAddressComponent
+namespace CarBook_WebUI.ViewComponents.DefaultViewComponents
 {
-    public class _FooterAddressComponentPartial : ViewComponent
+    public class _DefaultLast5CarsWithBrandsComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _FooterAddressComponentPartial(IHttpClientFactory httpClientFactory)
+        public _DefaultLast5CarsWithBrandsComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -17,12 +16,12 @@ namespace CarBook_WebUI.ViewComponents.FooterAddressComponent
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7117/api/FooterAddresses");
+            var responseMessage = await client.GetAsync("https://localhost:7117/api/Cars/GetLast5CarWithBrandQueryHandler");
             if (responseMessage.IsSuccessStatusCode)
             {
 
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultFooterAddressDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultLast5CarsWithBrandsDto>>(jsonData);
                 return View(values);
 
             }
