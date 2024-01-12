@@ -18,15 +18,15 @@ namespace BookCar_WebAPI.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
-        private readonly GetCarWithPricingQueryHandler _getCarWithPricingQueryHandler;
+        
         public CarsController(GetCarByIdQueryHandler getCarByIdQueryHandler,
             GetCarQueryHandler getCarQueryHandler,
             CreateCarCommandHandler createCarCommandHandler,
             UpdateCarCommandHandler updateCarCommandHandler,
             RemoveCarCommandHandler removeCarCommandHandler,
             GetCarWithBrandQueryHandler getCarWithBrandQueryHandler,
-            GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler = null,
-            GetCarWithPricingQueryHandler getCarWithPricingQueryHandler = null)
+            GetLast5CarWithBrandQueryHandler getLast5CarWithBrandQueryHandler)
+            
         {
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
             _getCarQueryHandler = getCarQueryHandler;
@@ -35,7 +35,7 @@ namespace BookCar_WebAPI.Controllers
             _removeCarCommandHandler = removeCarCommandHandler;
             _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
             _getLast5CarWithBrandQueryHandler = getLast5CarWithBrandQueryHandler;
-            _getCarWithPricingQueryHandler = getCarWithPricingQueryHandler;
+           
         }
 
 
@@ -89,11 +89,6 @@ namespace BookCar_WebAPI.Controllers
             return Ok(values);
         }
 
-        [HttpGet("GetCarWithPricingQueryHandler")]
-        public IActionResult GetCarWithPricingQueryHandler()
-        {
-            var values = _getCarWithPricingQueryHandler.Handle();
-            return Ok(values);
-        }
+      
     }
 }
