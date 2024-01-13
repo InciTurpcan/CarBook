@@ -1,13 +1,12 @@
-﻿using CarBook_Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook_Application.Features.Mediator.Results.BlogResults
+namespace CarBook_Dto.BlogDtos
 {
-    public class GetAllBlogsWithAuthorQueryResult
+    public class ResultAllBlogsWithAuthorsDto
     {
         public int BlogID { get; set; }
         public string Title { get; set; }
