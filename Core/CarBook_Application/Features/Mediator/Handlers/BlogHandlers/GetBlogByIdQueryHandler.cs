@@ -15,6 +15,12 @@ namespace CarBook_Application.Features.Mediator.Handlers.BlogHandlers
     public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
     {
         private readonly IRepository<Blog> _repository;
+
+        public GetBlogByIdQueryHandler(IRepository<Blog> repository)
+        {
+            _repository = repository;
+        }
+
         public async Task<GetBlogByIdQueryResult> Handle(GetBlogByIdQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
@@ -25,6 +31,7 @@ namespace CarBook_Application.Features.Mediator.Handlers.BlogHandlers
                CategoryID=values.CategoryID,
                CoverImgUrl=values.CoverImgUrl,
                Title = values.Title,
+               Description= values.Description,
                CreateDate = values.CreateDate,
             };
         }
