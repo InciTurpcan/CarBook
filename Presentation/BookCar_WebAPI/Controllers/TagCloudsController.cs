@@ -35,7 +35,7 @@ namespace CarBook_WebAPI.Controllers
         public async Task<IActionResult> CreateTagCloud(CreateTagCloudCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Etiket Bulutu Başarıyla Eklendi.");
+            return Ok("Etiket Bulutu Başarıyla Eklendi. ");
         }
 
         [HttpDelete]
