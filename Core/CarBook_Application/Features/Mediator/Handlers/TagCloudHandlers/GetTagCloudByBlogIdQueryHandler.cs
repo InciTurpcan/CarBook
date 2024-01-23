@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace CarBook_Application.Features.Mediator.Handlers.TagCloudHandlers
 {
-    public class GetTgCloudByBlogIdQueryHandler : IRequestHandler<GetTagCloudByBlogIdQuery, List<GetTagCloudByBlogIdQueryResult>>
+    public class GetTagCloudByBlogIdQueryHandler : IRequestHandler<GetTagCloudByBlogIdQuery, List<GetTagCloudByBlogIdQueryResult>>
     {
         private readonly ITagCloudRepository _repository;
 
-        public GetTgCloudByBlogIdQueryHandler(ITagCloudRepository repository)
+        public GetTagCloudByBlogIdQueryHandler(ITagCloudRepository repository)
         {
             _repository = repository;
         }
