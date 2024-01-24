@@ -2,9 +2,9 @@
 <div class="col-md-8 ftco-animate">
 
     <h2 class="mb-3">@Model.Title</h2>
-         <p>@Model.Description</p>
-   
-        @await Component.InvokeAsync("_BlogDetailCloudTagByBlogComponentPartial" , new {id=ViewBag.blogid})
+    <p>@Model.Description</p>
+
+    @await Component.InvokeAsync("_BlogDetailCloudTagByBlogComponentPartial", new { id = ViewBag.blogid })
 
     @await Component.InvokeAsync("_BlogDetailsAuthorAboutComponentPartial", new { id = ViewBag.blogid })
 
@@ -14,7 +14,7 @@
         @await Component.InvokeAsync("_CommentListByBlogComponentPartial")
 
         @await Component.InvokeAsync("_AddCommentComponentPartial")
-             
+
     </div>
 
 </div>
