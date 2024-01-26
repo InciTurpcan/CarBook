@@ -29,7 +29,7 @@ namespace CarBook_Application.Features.CQRS.Handlers.CarHandlers
                 Seat=command.Seat,
                 Transmission=command.Transmission,
                 CoverImgUrl=command.CoverImgUrl,
-                BrandID=command.BarandID,
+                BrandID=command.BrandID,
                 Fuel=command.Fuel
             });
         }
