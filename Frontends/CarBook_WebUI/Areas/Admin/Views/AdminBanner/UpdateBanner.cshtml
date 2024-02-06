@@ -1,0 +1,49 @@
+﻿@model UpdateBannerDto
+@{
+    ViewData["Title"] = "UpdateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- page content -->
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Banner Güncelleme Sayfası</h4>
+                        
+                        <form method="post">
+                            <div class="form-group">
+                                <input type="hidden" asp-for="BannerID" />
+                                <label for="exampleInputTitle">Başlık Adı</label>
+                                <input type="text" class="form-control" asp-for="Title" id="exampleInputTitle" placeholder="Başlığı giriniz">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" id="exampleInputDescription" placeholder="Açıklama giriniz">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputVideoDescription">Video Açıklama</label>
+                                <input type="text" class="form-control" asp-for="VideoDescription" id="exampleInputVideoDescription" placeholder="Video Açıklama giriniz">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputVideoUrl">Video Url</label>
+                                <input type="text" class="form-control" asp-for="VideoUrl" id="exampleInputVideoUrl" placeholder="Video linki giriniz">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Banner'ı Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

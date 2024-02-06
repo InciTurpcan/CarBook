@@ -1,4 +1,4 @@
-﻿@model List<ResultBannerDto>
+﻿@model List<ResultAboutDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -11,7 +11,7 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Banner Alanı</h4>
+                        <h4 class="card-title">Ana Sayfa Hakkımızda Alanı</h4>
 
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -19,30 +19,26 @@
                                     <tr>
                                         <th>Başlık</th>
                                         <th>Açıklama</th>
-                                        <th>Video URL</th>
-                                        <th>Video Açıklama</th>
+                                        <th>Görsel</th>
                                         <th>Sil</th>
                                         <th>Güncelle</th>
-                                        <th>Youtube'da Aç</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
-                                            <td>@item.Title</td>
-                                            <td>@item.Description</td>
-                                            <td>@item.VideoUrl</td>
-                                            <td>@item.VideoDescription</td>
-                                            <td><a href="/Admin/AdminBanner/RemoveBanner/@item.BannerID" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminBanner/UpdateBanner/@item.BannerID" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/Admin/AdminBanner/UpdateBanner/@item.BannerID" class="btn btn-outline-dark">Youtube'da Aç</a></td>
+                                            <td>@item.title</td>
+                                            <td>@item.description</td>
+                                            <td>@item.imageUrl</td>
+                                            <td><a href="/Admin/AdminAbout/RemoveAbout/@item.aboutID" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminAbout/UpdateAbout/@item.aboutID" class="btn btn-outline-success">Güncelle</a></td>
                                         </tr>
                                     }
 
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminBanner/CreateBanner/" class="btn btn-outline-primary">Yeni Banner Girişi</a></td>
+                            <td><a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary">Yeni Hakkımda Alanı Girişi</a></td>
                         </div>
 
                     </div>
