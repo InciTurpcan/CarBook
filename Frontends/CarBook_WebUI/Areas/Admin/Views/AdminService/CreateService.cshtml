@@ -1,0 +1,42 @@
+﻿@model CreateServiceDto
+@{
+    ViewData["Title"] = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- page content -->
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title"> Yeni Hizmet Girişi</h4>
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Lokasyon Adı</label>
+                                <input type="text" class="form-control" asp-for="Title" id="exampleInputTitle" placeholder="Başlık giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" id="exampleInputDescription" placeholder="Açıklama giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputIconUrl">Icon-Url</label>
+                                <input type="text" class="form-control" asp-for="IconUrl" id="exampleInputIconUrl" placeholder="İkon giriniz">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Hizmet Bilgisini Kaydet</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

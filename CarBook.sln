@@ -21,7 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook_WebUI", "Frontends\CarBook_WebUI\CarBook_WebUI.csproj", "{4573ED36-B697-4C68-9079-E3227A543C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBook_Dto", "Frontends\CarBook_Dto\CarBook_Dto.csproj", "{5CDBC1E8-7445-4B9D-AC17-1923ECA32205}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook_Dto", "Frontends\CarBook_Dto\CarBook_Dto.csproj", "{5CDBC1E8-7445-4B9D-AC17-1923ECA32205}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{71F04D02-706B-4E82-8AC4-55F945E7440F}"
+	ProjectSection(SolutionItems) = preProject
+		StatisticList.txt = StatisticList.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

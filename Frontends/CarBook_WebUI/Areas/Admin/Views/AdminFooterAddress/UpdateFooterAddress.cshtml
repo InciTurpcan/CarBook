@@ -1,0 +1,46 @@
+﻿@model UpdateFooterAddressDto
+@{
+    ViewData["Title"] = "UpdateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- page content -->
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Adres Bilgisi Güncelleme Sayfası</h4>
+
+                        <form method="post">
+                            <input type="hidden" asp-for="FooterAddressID" />
+                            <div class="form-group">
+                                <label for="exampleInputAddress">Adres</label>
+                                <input type="text" class="form-control" asp-for="Address" id="exampleInputAddress" placeholder="Adres giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPhone">Telefon</label>
+                                <input type="tel" class="form-control" asp-for="Phone" id="exampleInputPhone" placeholder="Telefon numarası giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail">Email</label>
+                                <input type="text" class="form-control" asp-for="Email" id="exampleInputEmail" placeholder="Email giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" asp-for="Description" id="exampleInputDescription" placeholder="Açıklama giriniz">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Adres Bilgisini Güncelle</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

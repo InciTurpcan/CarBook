@@ -2,6 +2,8 @@
 using CarBook_Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook_Application.Features.CQRS.Queries.CarQueries;
 using CarBook_Application.Features.CQRS.Results.CarResults;
+using CarBook_Application.Features.Mediator.Queries.StatisticsQueries;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +20,7 @@ namespace BookCar_WebAPI.Controllers
         private readonly RemoveCarCommandHandler _removeCarCommandHandler;
         private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
         private readonly GetLast5CarWithBrandQueryHandler _getLast5CarWithBrandQueryHandler;
+
         
         public CarsController(GetCarByIdQueryHandler getCarByIdQueryHandler,
             GetCarQueryHandler getCarQueryHandler,
@@ -89,6 +92,6 @@ namespace BookCar_WebAPI.Controllers
             return Ok(values);
         }
 
-      
+
     }
 }

@@ -1,0 +1,16 @@
+Araba Sayýsý
+Lokasyon Sayýsý
+Yazar Sayýsý
+Blog Sayýsý
+Marka Sayýsý
+Araçlarýn Günlük Fiyat Ortalamasý
+Araçlarýn Haftalýk Fiyat Ortalamasý
+Araçlarýn Aylýk Fiyat Ortalamasý
+Otomatik Vites Araba Sayýsý
+En Fazla Araçlý Markasý
+En Fazla Yorum Alan Blog Baþlýðý
+1000 Km'den Düþük Araçlar
+Benzin ve Dizel Araçlar
+Elektrikli Araçlar
+En Pahalý Araç
+En Ucuz Araç
