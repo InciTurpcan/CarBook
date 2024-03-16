@@ -12,6 +12,13 @@ namespace CarBook_WebAPI.Controllers
         private readonly IMediator _mediator;
 
         public CarPricingsController(IMediator mediator)
+        
+        
+        
+        
+        
+        
+        
         {
             _mediator = mediator;
         }
@@ -20,6 +27,13 @@ namespace CarBook_WebAPI.Controllers
         public async Task<IActionResult> GetCarPricingWithCarList()
         {
             var values = await _mediator.Send(new GetCarPricingWithCarQuery());
+            return Ok(values);
+        }
+
+        [HttpGet("GetCarPricingWithTimePeriodList")]
+        public async Task<IActionResult> GetCarPricingWithTimePeriodList()
+        {
+            var values = await _mediator.Send(new GetCarPricingWithTimePeriodQuery());
             return Ok(values);
         }
     }
